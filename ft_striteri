@@ -1,0 +1,13 @@
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+    char    *str;
+    int     i;
+
+    str = (char *)s;
+    i = ft_strlen(str);
+    while (str[i])
+    {
+        f(i, &str[i]);
+        i++;
+    }
+}
