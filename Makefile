@@ -6,7 +6,7 @@
 #    By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 00:57:57 by agoujdam          #+#    #+#              #
-#    Updated: 2022/10/29 07:18:57 by agoujdam         ###   ########.fr        #
+#    Updated: 2022/10/29 07:29:52 by agoujdam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,14 +34,20 @@ NAME = libft.a
 all : $(NAME) 
 	
 $(NAME) : $(SRC)
+	@echo "Creating \"libft.a\""
 	@$(CC) $(CFLAGS) $(SRC) $(LIB) -c 
 	@ar -rc $(NAME) $(OBJ)
+	@echo "Creation of the Library: SUCCESSFUL"
 
 clean :
+	@echo "Deleting object files"
 	rm -rf *.o $(ADF)
+	@echo "Deletion of object files: SUCCESSFUL"
 
 fclean:
-	rm -rf *.o $(ADF) libft.a
+	@echo "Deleting Library and object files"
+	@rm -rf *.o $(ADF) libft.a
+	@echo "Deletion of library and object files: SUCCESSFUL"
 
 re: fclean all
 
