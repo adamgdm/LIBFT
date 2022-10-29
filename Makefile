@@ -6,7 +6,7 @@
 #    By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 00:57:57 by agoujdam          #+#    #+#              #
-#    Updated: 2022/10/28 10:02:17 by agoujdam         ###   ########.fr        #
+#    Updated: 2022/10/29 07:18:57 by agoujdam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,14 @@ CFLAGS = -Wall -Wextra -Werror
 
 OBJ = $(SRC:.c=.o)
 
+CC = cc
+
 NAME = libft.a
 
-all : $(SRC)
-	@cc $(CFLAGS) $(SRC) $(LIB) -c 
+all : $(NAME) 
+	
+$(NAME) : $(SRC)
+	@$(CC) $(CFLAGS) $(SRC) $(LIB) -c 
 	@ar -rc $(NAME) $(OBJ)
 
 clean :

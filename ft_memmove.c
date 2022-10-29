@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 18:31:48 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/10/28 11:33:16 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/10/29 04:16:11 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	dest = (unsigned char *)dst;
 	srcc = (unsigned char *)src;
 	i = 0;
-	if (dest == NULL && srcc == NULL)
+	if (!dest && !srcc)
 		return (0);
 	while (i < len && dst < src)
 	{
