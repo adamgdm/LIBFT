@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:21:57 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/11/02 12:22:07 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/11/02 13:07:41 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 
 	i = 0;
+	if (!s)
+		return (0);
 	sub_len = start;
 	if (len > ft_strlen(s))
 		len = ft_strlen(s) - start;
