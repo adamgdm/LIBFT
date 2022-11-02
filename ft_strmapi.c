@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:22:55 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/10/26 13:31:17 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/10/31 13:06:52 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	int		j;
 
+	if (!s)
+		return (0);
 	str = (char *)s;
 	i = ft_strlen(str);
 	j = 0;

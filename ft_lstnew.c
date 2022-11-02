@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 17:01:02 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/10/31 22:31:47 by agoujdam         ###   ########.fr       */
+/*   Created: 2022/10/31 17:09:18 by agoujdam          #+#    #+#             */
+/*   Updated: 2022/10/31 17:10:28 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stdlib.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstnew(void *cont)
 {
-	size_t	total;
-	size_t	i;
-	char	*space;
+	t_list *Drake;
 
-	i = 0;
-	total = size * count;
-	space = malloc(total);
-	if (!space)
-		return (0);
-	while (i < total)
-		space[i++] = 0;
-	return (space);
+	Drake = (t_list *)malloc(sizeof(t_list));
+	Drake -> content = cont;
+	Drake -> next = NULL;
+	return (Drake);
 }
