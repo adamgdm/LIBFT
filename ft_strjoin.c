@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:47:53 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/10/31 12:59:49 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/11/02 11:40:17 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		k;
 
 	i = 0;
-	j = 0;	
+	j = 0;
 	if (!s1 || !s2)
 		return (0);
 	k = ft_strlen(s1);

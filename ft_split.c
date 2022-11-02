@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 11:44:51 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/10/31 13:05:52 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/11/02 11:41:05 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	if (!s)
-		return 0;
+		return (0);
 	w_total = ft_word_count(s, c);
 	wa = 1;
 	i = 0;

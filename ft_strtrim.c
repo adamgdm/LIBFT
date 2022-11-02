@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:35:24 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/10/31 13:04:53 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:31:09 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static int	ft_end(char const *s1, char const *set)
 	i = ft_strlen(s1) - 1;
 	index = -1;
 	len_set = ft_strlen(set);
-	if (!s1)
+	if (!s1[0])
 		return (0);
 	while (index != len_set)
 	{
