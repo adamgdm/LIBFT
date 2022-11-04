@@ -6,7 +6,7 @@
 #    By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 00:57:57 by agoujdam          #+#    #+#              #
-#    Updated: 2022/10/29 07:29:52 by agoujdam         ###   ########.fr        #
+#    Updated: 2022/11/03 15:48:18 by agoujdam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,10 @@ SRC = ft_strtrim.c ft_strjoin.c ft_itoa.c ft_atoi.c ft_bzero.c ft_calloc.c \
 LIB = libft.h
 
 ADF = libft.h.gch
+
+bonus = *_bonus.c
+
+BONUS_OBJ = $(bonus:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -39,6 +43,12 @@ $(NAME) : $(SRC)
 	@ar -rc $(NAME) $(OBJ)
 	@echo "Creation of the Library: SUCCESSFUL"
 
+bonus : $(bonus)
+	@echo "Creating \"libft.a\""
+	@$(CC) $(CFLAGS) $(bonus) $(LIB) -c 
+	@ar -rc $(NAME) $(BONUS_OBJ)
+	@echo "Creation of the Library: SUCCESSFUL"
+
 clean :
 	@echo "Deleting object files"
 	rm -rf *.o $(ADF)
@@ -51,4 +61,4 @@ fclean:
 
 re: fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdeldone_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 17:09:18 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/10/31 17:10:28 by agoujdam         ###   ########.fr       */
+/*   Created: 2022/11/04 12:56:02 by agoujdam          #+#    #+#             */
+/*   Updated: 2022/11/04 15:13:37 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
-t_list	*ft_lstnew(void *cont)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	t_list *Drake;
-
-	Drake = (t_list *)malloc(sizeof(t_list));
-	Drake -> content = cont;
-	Drake -> next = NULL;
-	return (Drake);
+	if (lst && del)
+	{	
+		del(lst->content);
+		free(lst);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:10:42 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/11/02 13:11:40 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/11/04 15:36:46 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int	ft_atoi(const char *str)
 		result = result * 10 + str[i++] - '0';
 	result *= sign;
 	if (!(result < 9223372036854775807))
-		return (0);
-	else if (!(result >= -9223372036854775807))
 		return (-1);
+	else if (!(result >= -9223372036854775807))
+		return (0);
 	return (result);
 }
