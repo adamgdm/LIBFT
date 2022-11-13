@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 11:44:51 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/11/02 11:41:05 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:08:14 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,17 @@ static int	ft_size(char const *str, char c, int wa)
 	return (size);
 }
 
+static char	**ft_free_that_shit(char **tab, int wa)
+{
+	while (wa - 1)
+	{
+		free(tab[wa - 1]);
+		wa--;
+	}
+	free(tab);
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
@@ -104,7 +115,7 @@ char	**ft_split(char const *s, char c)
 	{
 		tab[wa - 1] = ft_substr(s, ft_actual_word(s, c, wa), ft_size(s, c, wa));
 		if (!tab[wa - 1])
-			free(tab[wa - 1]);
+			return (ft_free_that_shit(tab, wa));
 		wa++;
 	}
 	tab[wa - 1] = NULL;

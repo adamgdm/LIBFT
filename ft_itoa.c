@@ -6,13 +6,13 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:24:26 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/10/27 12:00:55 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:08:56 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_how_many_characters_in_that_shit(long n)
+static size_t	ft_how_many_characters_in_that_shit(long n)
 {
 	size_t	count;
 
