@@ -6,7 +6,7 @@
 /*   By: agoujdam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:38:40 by agoujdam          #+#    #+#             */
-/*   Updated: 2022/11/13 20:12:39 by agoujdam         ###   ########.fr       */
+/*   Updated: 2022/11/13 22:30:53 by agoujdam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
